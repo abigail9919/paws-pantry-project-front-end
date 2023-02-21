@@ -1,3 +1,7 @@
+nav{
+    text-decoration: none;
+}
+
 #wrapper{
     display: flex;
     flex-direction: column;
@@ -11,4 +15,34 @@
 #headerHeader img{
     justify-content: center;
     object-fit: contain;
+}
+
+#infoColumns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+
+#buttonColumns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+}
+
+.card{
+    height: 350px;
+    width: 300px;
+    background-color: crimson;
+}
+
+.card h1{
+    color: white;
+}
+
+.card button{
+    bottom: 0;
 }
