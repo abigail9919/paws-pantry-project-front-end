@@ -1,0 +1,14 @@
+#wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+#headerHeader{
+    background-color: crimson;
+    border: solid 10px crimson;
+}
+
+#headerHeader img{
+    justify-content: center;
+    object-fit: contain;
+}
