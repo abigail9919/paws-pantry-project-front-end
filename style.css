@@ -7,14 +7,35 @@ nav{
     flex-direction: column;
 }
 
-#headerHeader{
-    background-color: crimson;
-    border: solid 10px crimson;
+#head{
+    background-color: #990000;
+    border: solid 15px #990000;
 }
 
-#headerHeader img{
-    justify-content: center;
-    object-fit: contain;
+div > img{
+    width: 99%;
+    margin: auto;
+    display: block;
+}
+
+.dot {
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 40px;
+    overflow-wrap: break-word;
+}
+
+.dot > p{
+    color: black;
+    overflow-wrap: break-word;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
 }
 
 #infoColumns{
@@ -26,6 +47,16 @@ nav{
     padding-bottom: 150px;
 }
 
+.infoCard{
+    height: 550px;
+    width: 350px;
+}
+
+.infoCard > p{
+    font-size:medium;
+    line-height: 2em;
+}
+
 #buttonColumns{
     display: flex;
     flex-direction: row;
@@ -35,14 +66,30 @@ nav{
 
 .card{
     height: 350px;
-    width: 300px;
-    background-color: crimson;
+    width: 350px;
+    background-color: #990000;
+    border-radius: 5px;
 }
 
 .card h1{
     color: white;
+    text-align: center;
+    font-size: xx-large;
+    padding-top: 3em;
+    padding-bottom: 1em;
 }
 
 .card button{
-    bottom: 0;
+    margin: auto;
+    display: block;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    height: 50px;
+}
+
+footer{
+    padding-top: 4em;
+    padding-bottom: 2em;
+    text-align: center;
 }
