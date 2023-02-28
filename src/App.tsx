@@ -5,20 +5,21 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import FormControl from "@mui/material/FormControl";
-
+import { Header } from './Header';
 
 function App() {
   return (
     <div style={{ height: 400, width: "100%" }}>
       <div style={{ display: "flex", height: "100%" }}>
         <div style={{ flexGrow: 1 }}>
-          <AppBar style={{ background: "#d62020" }} position="static">
+          <Header />
+          <AppBar style={{ background: "#990000" }} position="static">
             <Toolbar>
               <FormControl sx={{ m: 5, minWidth: 120}} size="small">
-              <Button variant="text"
+              {/* <Button variant="text"
               sx={{ marginLeft: "auto"}}>
                 Hello World
-              </Button>
+              </Button> */}
               </FormControl>
             </Toolbar>
           </AppBar>
