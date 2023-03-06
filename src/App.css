@@ -46,4 +46,72 @@ nav {
 .jaguar-image {
   width: 100%;
   overflow: hidden;
+  z-index: 0;
+}
+
+article {
+  position: relative;
+  left: 25%;
+  width: 75%;
+  line-height: 1.5;
+}
+
+.breadcrumbs {
+  font-size: small;
+}
+
+.breadcrumbs a {
+  color:lightslategray;
+}
+
+.paws-title {
+  font-size: medium;
+  margin-left: 15px;
+}
+
+.word-content {
+  position: relative;
+  z-index: 1;
+  top: -70px;
+  background-color: white;
+  font-size: 1.125rem;
+  width: 66%;
+  padding: 0.75rem;
+}
+
+article h1 {
+  font-size: xx-large;
+  margin-left: 15px;
+}
+
+article h4 {
+  font-weight: 400;
+  margin-left: 15px;
+}
+
+article h3 {
+  font-size: x-large;
+  margin-left: 15px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.location-and-hours {
+  width: 25%;
+  position: absolute;
+  right: 3%;
+  top: 50px;
+  border-top: 5px solid gainsboro;
+}
+
+.location-and-hours h2 {
+  color: #990000;
+  font-weight: 600;
+}
+
+.location-and-hours h3{
+  font-size: large;
+  margin-left: 0px;;
 }
