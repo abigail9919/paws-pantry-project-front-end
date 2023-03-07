@@ -189,3 +189,31 @@ button:hover {
   font-weight: 400;
   font-size: 1.25rem;
 }
+
+.bottom-content {
+  background-color: #990000;
+  color: white;
+  font-size: x-large;
+  text-align: center;
+  height: 250px;
+  padding-top: 30px;
+}
+
+.bottom-content button {
+  background-color: #800000;
+  border-radius: 0.25rem;
+  transition: background-color .2s, color .2s;
+}
+
+.bottom-content button:hover {
+  background-color: white;
+  color: #800000;
+}
+
+.social-links {
+  background-color: #800000;
+  height: 100px;
+  text-align: left;
+  padding-left: 15px;
+  padding-top: 15px;
+}

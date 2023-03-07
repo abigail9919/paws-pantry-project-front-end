@@ -93,7 +93,12 @@ function App() {
           <h4>Contact us at <button><b>jagsfood@iupui.edu</b></button> or stop by the pantry to speak to a Paws’ Pantry team member.</h4>
         </div>
 
-        <div className = "bottom-content"></div>
+        <div className = "bottom-content">
+          <h3>Support Paws' Pantry Today</h3>
+          <button>GIVE NOW</button>
+          <div className="social-links"><h5>INTRANET</h5></div>
+          <div className='necessary'></div>
+        </div>
 
     </div>
   );
