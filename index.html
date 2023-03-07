@@ -8,24 +8,26 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="">News</a>
-        <a href="">Events</a>
-        <a href="">about & contact</a>
-      </nav>
-
-      <nav class="bottom_nav">
-        <a href="">Get involved</a>
-        <a href="">Campus Center</a>
-        <a href="">Health & Wellness</a>
-      </nav>
-    </header>
-    <div class="wrapper">
-      <img
-        src="images/hero.png
-      "
-      />
+    <div class = "upper-header">
+      <img class="IU-logo" src={IUPUILogo} alt="IUPUI Logo"/>
+      <div class = "nav-wrapper">
+        <a href="#">News</a>
+        <a href="#">Events</a>
+        <a href="#">About & Contact</a>
+        <a href="#"><img src={search}/></a>
+        {/* fake search button here */}
+      </div>
+    </div>
+    <header class="student-affairs-header">Division of <b>Student Affairs</b></header>
+    <nav>
+      <a href="#">Get Involved</a>
+      <a href="#">Campus Center</a>
+      <a href="#">Health & Wellness</a>
+      <a href="#">Housing</a>
+      <a href="#" class = "red-bottom">Advocacy & Resources</a>
+      <a href="#">Student Conduct</a>
+    </nav>
+    <img class = "jaguar-image" src={jaguar} alt="Stuffed Jaguar"/>
       <div class="confirmation_container">
         <main class="container">
           <h1>Confirmed!</h1>
