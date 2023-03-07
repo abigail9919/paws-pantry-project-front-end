@@ -22,7 +22,7 @@ function App() {
         <a href="#">Campus Center</a>
         <a href="#">Health & Wellness</a>
         <a href="#">Housing</a>
-        <a href="#">Advocacy & Resources</a>
+        <a href="#" className = "red-bottom">Advocacy & Resources</a>
         <a href="#">Student Conduct</a>
       </nav>
       <img className = "jaguar-image" src={jaguar} alt="Stuffed Jaguar"/>
@@ -49,6 +49,7 @@ function App() {
           </ul>
         </div>
 
+        {/* react component?? */}
         <div className="location-and-hours">
           <h2>Location and Hours</h2>
           <h3>Paws’ Pantry – Campus Center 130</h3>
@@ -66,8 +67,25 @@ function App() {
           Thursdays (students, faculty, and staff)<br />
           12noon–6 p.m.
         </div>
+
       </article>
 
+      {/* react component?? */}
+      <div className = "left-side-nav">
+          <a href="#">Get Help</a>
+          <a href="#">Interpersonal Violence Prevention and Response</a>
+          <a href="#">Emergency Resources</a>
+          <a href="#">Food & Clothing Services</a>
+          <a href="#" className="gray">Paws' Closet</a>
+          <a href="#" className="gray red">Paws' Pantry</a>
+          <a href="#">Refer to or Contact Student Advocacy</a>
+        </div>
+
+        {/* make this a react component?? */}
+        <div className="button-wrapper">
+          <label for="submit-button">Schedule Now</label><br />
+          <button className='submit-button'><b>Get Started</b></button>
+        </div>
 
     </div>
   );
