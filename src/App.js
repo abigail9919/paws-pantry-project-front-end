@@ -87,6 +87,14 @@ function App() {
           <button className='submit-button'><b>Get Started</b></button>
         </div>
 
+        {/* make this a component as well?? */}
+        <div className="questions-wrapper">
+          <h3>Questions?</h3>
+          <h4>Contact us at <button><b>jagsfood@iupui.edu</b></button> or stop by the pantry to speak to a Paws’ Pantry team member.</h4>
+        </div>
+
+        <div className = "bottom-content"></div>
+
     </div>
   );
 }

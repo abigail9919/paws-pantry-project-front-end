@@ -168,3 +168,24 @@ button:hover {
   background-color: white;
   color:#990000;
 }
+
+.questions-wrapper {
+  width: 750px;
+  position: relative;
+  left: 25%;
+  top: -20px;
+}
+
+.questions-wrapper h3 {
+  font-size: xx-large;
+}
+
+.questions-wrapper button {
+  font-size: medium;
+  width: 180px;
+}
+
+.questions-wrapper h4 {
+  font-weight: 400;
+  font-size: 1.25rem;
+}
