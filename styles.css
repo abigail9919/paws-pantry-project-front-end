@@ -46,6 +46,7 @@ h1, h2, h3, h4, h5, h6, p {
     width: 100%;
     overflow: hidden;
     z-index: 0;
+    
   }
 
 .bottom_nav{
@@ -159,6 +160,44 @@ button:hover {
     background-color: #800000;
     height: 100px;
     text-align: left;
-    padding-left: 15px;
-    padding-top: 15px;
+    font-size:x-large;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .socialFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    
+  }
+
+  .socialFlex img {
+    padding: 10px;
+    width: 55px;
+  }
+
+  footer {
+    height: 150px;
+    position: relative;
+    top: 40px;
+  }
+
+  footer img {
+    width: 250px;
+    z-index: 1;
+  }
+
+  .footerFlex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .links a {
+    color: #900;
+    padding: 5px;
   }
