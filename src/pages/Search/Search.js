@@ -1,9 +1,10 @@
 import './Search.css';
 
 function Search() {
+    console.log("Hey!")
     return (
         <div className = "search-page-wrapper">
-            hey there... you've reached the search page
+            <p>hey there... you've reached the search page</p>
         </div>
     );
 };

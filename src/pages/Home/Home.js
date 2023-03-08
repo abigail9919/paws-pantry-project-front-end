@@ -83,7 +83,7 @@ function Home() {
             {/* make this a react component?? */}
             <div className="button-wrapper">
             <label for="submit-button">Schedule Now</label><br />
-            <button className='submit-button' onClick=""><b>Get Started</b></button>
+            <button className='submit-button' onClick={event =>  window.location.href='../Search/Search'}><b>Get Started</b></button>
             </div>
 
             {/* make this a component as well?? */}
