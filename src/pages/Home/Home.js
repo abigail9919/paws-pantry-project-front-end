@@ -2,6 +2,10 @@ import './home.css';
 import IUPUILogo from '../../images/IUPUILogo.jpg';
 import jaguar from '../../images/stuffed-jaguar.jpg';
 import search from '../../images/search.png';
+import twitter from '../../images/twitter.png';
+import instagram from '../../images/instagram.png';
+import youtube from '../../images/youtube.png';
+import IUsig from '../../images/iu-sig-formal.png';
 
 function Home() {
     return (
@@ -95,8 +99,29 @@ function Home() {
             <div className = "bottom-content">
             <h3>Support Paws' Pantry Today</h3>
             <button>GIVE NOW</button>
-            <div className="social-links"><h5>INTRANET</h5></div>
-            <div className='necessary'></div>
+            <div>
+        
+        <div className="social-links">
+          <h5>INTRANET</h5>
+          <div className="socialFlex">
+            <img src={twitter} alt="twitter icon"/>
+            <img src={instagram} alt="instagram icon"/>
+            <img src={youtube} alt="youtube icon"/>
+          </div>
+        </div>
+        <div className='necessary'></div>
+      </div>
+
+      <footer>
+        <div className="footerFlex">
+          <img src={IUsig} alt=""/>
+          <div className="links">
+            <a href="#">Accessibility</a> |
+            <a href="#">Privacy Notice</a> |
+            <a href="#">Copyright © 2023 The Trustees of Indiana University</a>
+          </div>
+        </div>
+      </footer>
             </div>
         </div>
     );
