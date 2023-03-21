@@ -17,7 +17,7 @@ function Home() {
                     <a href="#">Events</a>
                     <a href="#">About & Contact</a>
                     <a href="#"><img src={search}/></a>
-                </div>
+                </div>//helllo,
             </div>
             <header className="student-affairs-header">Division of <b>Student Affairs</b></header>
             <nav>
