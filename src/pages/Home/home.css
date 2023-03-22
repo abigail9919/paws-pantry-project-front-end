@@ -25,21 +25,8 @@
     color: black;
   }
   
-  nav {
-    margin-left: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  
   .red-bottom {
     border-bottom: 4px solid #900;
-  }
-  
-  .student-affairs-header {
-    margin-left: 100px;
-    font-size: xx-large;
-    margin-top: 10px;
   }
   
   .jaguar-image {
