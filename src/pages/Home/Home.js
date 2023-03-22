@@ -1,7 +1,10 @@
+// The below imports are for the Style Sheet and various Components
 import './home.css';
-import IUPUILogo from '../../images/IUPUILogo.jpg';
+import SearchBar from '../components/SearchBar/SearchBar';
+import Nav from '../components/Nav/Nav';
+
+// These imports are for images
 import jaguar from '../../images/stuffed-jaguar.jpg';
-import search from '../../images/search.png';
 import twitter from '../../images/twitter.png';
 import instagram from '../../images/instagram.png';
 import youtube from '../../images/youtube.png';
@@ -10,24 +13,8 @@ import IUsig from '../../images/iu-sig-formal.png';
 function Home() {
     return (
         <div>
-            <div className = "upper-header">
-                <img className="IU-logo" src={IUPUILogo} alt="IUPUI Logo"/>
-                <div className = "nav-wrapper">
-                    <a href="#">News</a>
-                    <a href="#">Events</a>
-                    <a href="#">About & Contact</a>
-                    <a href="#"><img src={search}/></a>
-                </div>
-            </div>
-            <header className="student-affairs-header">Division of <b>Student Affairs</b></header>
-            <nav>
-                <a href="#">Get Involved</a>
-                <a href="#">Campus Center</a>
-                <a href="#">Health & Wellness</a>
-                <a href="#">Housing</a>
-                <a href="#" className = "red-bottom">Advocacy & Resources</a>
-                <a href="#">Student Conduct</a>
-            </nav>
+            {<SearchBar />}
+            {<Nav />}
             <img className = "jaguar-image" src={jaguar} alt="Stuffed Jaguar"/>
 
             <article>
