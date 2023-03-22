@@ -1,0 +1,23 @@
+.social-links {
+    background-color: #800000;
+    height: 100px;
+    text-align: left;
+    font-size:x-large;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+.socialFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    
+}
+
+.socialFlex img {
+    padding: 15px;
+    width: 35px;
+}

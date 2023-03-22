@@ -2,13 +2,14 @@
 import './home.css';
 import SearchBar from '../components/SearchBar/SearchBar';
 import Nav from '../components/Nav/Nav';
+import Socials from '../components/Socials/Socials';
+import Footer from '../components/Footer/Footer';
+import LocationHours from '../components/LocationHours/LocationHours';
+import AsideNav from '../components/AsideNav/AsideNav';
 
 // These imports are for images
 import jaguar from '../../images/stuffed-jaguar.jpg';
-import twitter from '../../images/twitter.png';
-import instagram from '../../images/instagram.png';
-import youtube from '../../images/youtube.png';
-import IUsig from '../../images/iu-sig-formal.png';
+
 
 function Home() {
     return (
@@ -38,37 +39,12 @@ function Home() {
                     <li>Every client, even if it is not your first time visiting the pantry, will need to fill out an intake form for the 2022-23 school year.</li>
                 </ul>
                 </div>
-
-                {/* react component?? */}
-                <div className="location-and-hours">
-                <h2>Location and Hours</h2>
-                <h3>Paws’ Pantry – Campus Center 130</h3>
-
-                Fall 2023 Hours <br /><br />
-
-                All appointments must be made online 24 hours in advance. <br /><br />
-
-                Tuesdays (students only)<br />
-                10 a.m.–4 p.m. <br /><br />
-
-                Wednesdays (students only)<br />
-                11 a.m.–5 p.m.<br /><br />
-
-                Thursdays (students, faculty, and staff)<br />
-                12noon–6 p.m.
-                </div>
+                
+                {<LocationHours />}
 
             </article>
 
-            <div className = "left-side-nav">
-                <a href="#">Get Help</a>
-                <a href="#">Interpersonal Violence Prevention and Response</a>
-                <a href="#">Emergency Resources</a>
-                <a href="#">Food & Clothing Services</a>
-                <a href="#" className="gray">Paws' Closet</a>
-                <a href="#" className="gray red">Paws' Pantry</a>
-                <a href="#">Refer to or Contact Student Advocacy</a>
-            </div>
+            {<AsideNav />}
 
             <div className="button-wrapper">
                 <label for="submit-button">Schedule Now</label><br />
@@ -83,26 +59,9 @@ function Home() {
             <div className = "bottom-content">
                 <h3>Support Paws' Pantry Today</h3>
                 <button>GIVE NOW</button>
-                    <div className="social-links">
-                        <h5>INTRANET</h5>
-                        <div className="socialFlex">
-                            <img src={twitter} alt="twitter icon"/>
-                            <img src={instagram} alt="instagram icon"/>
-                            <img src={youtube} alt="youtube icon"/>
-                        </div>
-                    </div>
-                <div className='necessary'></div>
+                {<Socials />}
 
-                <footer>
-                    <div className="footerFlex">
-                        <img src={IUsig} alt=""/>
-                        <div className="links">
-                            <a href="#">Accessibility</a> |
-                            <a href="#">Privacy Notice</a> |
-                            <a href="#">Copyright © 2023 The Trustees of Indiana University</a>
-                        </div>
-                    </div>
-                </footer>
+                {<Footer />}
             </div>
         </div>
     );
