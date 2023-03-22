@@ -11,3 +11,16 @@ nav {
     font-size: xx-large;
     margin-top: 10px;
 }
+nav {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+ 
+.student-affairs-header {
+    margin-left: 100px;
+    font-size: xx-large;
+    margin-top: 10px;
+}
