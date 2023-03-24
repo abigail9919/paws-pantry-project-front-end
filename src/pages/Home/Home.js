@@ -6,6 +6,7 @@ import Socials from '../components/Socials/Socials';
 import Footer from '../components/Footer/Footer';
 import LocationHours from '../components/LocationHours/LocationHours';
 import AsideNav from '../components/AsideNav/AsideNav';
+import Button from '../components/Button/Button';
 
 // These imports are for images
 import jaguar from '../../images/stuffed-jaguar.jpg';
@@ -41,19 +42,18 @@ function Home() {
                 </div>
                 
                 {<LocationHours />}
-
+                {<AsideNav />}
             </article>
 
-            {<AsideNav />}
 
             <div className="button-wrapper">
-                <label for="submit-button">Schedule Now</label><br />
-                <button className='submit-button' onClick={event =>  window.location.href='/Search'}><b>Get Started</b></button>
+                {/* <label for="submit-button">Schedule Now</label><br /> */}
+                {<Button title = "Get Started" location="/Search" />}
             </div>
 
             <div className="questions-wrapper">
                 <h3>Questions?</h3>
-                <h4>Contact us at <button><b>jagsfood@iupui.edu</b></button> or stop by the pantry to speak to a Paws’ Pantry team member.</h4>
+                <h4>Contact us at {<Button title="jagsfood@iupui.edu" location="#"/>} or stop by the pantry to speak to a Paws’ Pantry team member.</h4>
             </div>
 
             <div className = "bottom-content">

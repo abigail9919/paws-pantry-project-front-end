@@ -1,12 +1,13 @@
 footer {
-    height: 150px;
+    height: 100px;
     position: relative;
-    top: 40px;
+    bottom: 0%;
   }
 
   footer img {
     width: 250px;
     z-index: 1;
+    padding-top: 30px;
   }
 
   .footerFlex {
@@ -17,6 +18,7 @@ footer {
 
   .links {
     color: black;
+    padding-top: 30px;
   }
 
   .links a {
