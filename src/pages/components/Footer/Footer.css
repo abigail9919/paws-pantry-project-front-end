@@ -19,6 +19,7 @@ footer {
   .links {
     color: black;
     padding-top: 30px;
+    overflow-y: hidden;
   }
 
   .links a {
