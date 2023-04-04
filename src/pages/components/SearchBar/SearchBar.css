@@ -2,6 +2,7 @@
     width: 100%;
     height: 15vh;
     border-bottom: 1px solid gainsboro;
+    overflow-y: hidden;
   }
 
   .IU-logo {
