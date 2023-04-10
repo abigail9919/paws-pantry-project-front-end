@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="stylesheet" href="/Dash/dash.css">
+    <link rel="stylesheet" href="ViewApp.css">
+    <script src="ViewApp.js" defer></script>
+
+</head>
+
+<body>
+
+    <nav id="nav">
+        <img src="/resources/iupui-white.png" alt="IUPUI LOGO">
+        <div class="nav">
+            <li class="navItem"><a href="/Dash/dash.html">Dashboard</a></li>
+            <li class="navItem"><a style="text-decoration: underline;" href="/View Apps/ViewApp.html">View
+                    Appointments</a></li>
+            <li class="navItem"><a href="/Create Apps/CreateApp.html">Create Appointments</a></li>
+            <li class="navItem"><a href="/Edit Apps/EditApp.html">Edit Appointments</a></li>
+        </div>
+    </nav>
+
+    <h1>View App</h1>
+
+    <input id="testNum" type="number" value="0">
+    <button id="test">test</button>
+    <br>
+
+    <div class="search-bar">
+        
+        <input id="searchName" type="search" placeholder="Search">
+    </div>
+
+    <div id="appLayout">
+        <p>Name:</p>
+        <p>Date:</p>
+        <p>Time:</p>
+    </div>
+    <hr>
+
+    <div id="displayApps">
+        <h1 id="noMoreApps" style="display: none;">You have no more Appointments!</h1>
+    </div>
+
+    <footer></footer>
+
+</body>
+
+</html>
