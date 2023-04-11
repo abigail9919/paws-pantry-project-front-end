@@ -19,6 +19,9 @@ function Home() {
             {<Nav />}
             <img className = "jaguar-image" src={jaguar} alt="Stuffed Jaguar"/>
 
+            {<AsideNav />}
+            {<LocationHours />}
+
             <article>
                 <div className="word-content">
                 <div className = "breadcrumbs">
@@ -40,9 +43,6 @@ function Home() {
                     <li>Every client, even if it is not your first time visiting the pantry, will need to fill out an intake form for the 2022-23 school year.</li>
                 </ul>
                 </div>
-                
-                {<LocationHours />}
-                {<AsideNav />}
             </article>
 
 
