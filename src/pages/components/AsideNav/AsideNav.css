@@ -1,0 +1,16 @@
+.left-side-nav {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    position: absolute;
+    left: 5%;
+    top: 115%;
+  }
+  
+  .gray {
+    background-color:whitesmoke;
+  }
+  
+  .red {
+    border-left: 4px solid #990000;
+  }

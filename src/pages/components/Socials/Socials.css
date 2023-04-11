@@ -1,0 +1,27 @@
+.social-links {
+    background-color: #800000;
+    overflow-y: hidden;
+    height: 80px;
+    text-align: left;
+    font-size:x-large;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 75px;
+    width: 100%;
+  }
+
+.socialFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    top: 5%;
+}
+
+.socialFlex img {
+    padding: 15px;
+    width: 35px;
+}

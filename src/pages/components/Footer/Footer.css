@@ -1,0 +1,30 @@
+footer {
+    height: 100px;
+    position: fixed;
+    bottom: 0%;
+    width: 100%
+  }
+
+  footer img {
+    width: 250px;
+    z-index: 1;
+    padding-top: 30px;
+  }
+
+  .footerFlex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .links {
+    color: black;
+    padding-top: 30px;
+    overflow-y: hidden;
+  }
+
+  .links a {
+    font-size: medium;
+    color: #900;
+    padding: 5px;
+  }
