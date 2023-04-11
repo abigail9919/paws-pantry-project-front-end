@@ -15,6 +15,7 @@ function Confirmation() {
       <div className="hamburger-menu">
        <img src={menu}/>
       </div>
+      
       <nav>
         <a href="#">Get Involved</a>
         <a href="#">Campus Center</a>
