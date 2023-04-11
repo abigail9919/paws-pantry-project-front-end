@@ -8,6 +8,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    bottom: 75px;
+    width: 100%;
   }
 
 .socialFlex {

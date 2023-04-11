@@ -1,7 +1,8 @@
 footer {
     height: 100px;
-    position: relative;
+    position: fixed;
     bottom: 0%;
+    width: 100%
   }
 
   footer img {
