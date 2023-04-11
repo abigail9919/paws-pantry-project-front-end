@@ -24,7 +24,7 @@ function Search() {
                 <form id="student-search" action="#" method="get">
                     <label for="student-id">Student ID #: </label>
                     <input type="text" id="student-id" name="student-id" size="20" required minlength="10"></input><br/><br/>
-                    {<Button title="Search" location="#"/>}
+                    {<Button title="Search" location="/Forms"/>}
                 </form>
 
             </article>
