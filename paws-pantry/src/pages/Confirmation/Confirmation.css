@@ -47,29 +47,26 @@
      width: 100%;
      font-size: 30px;
      padding: 10% 0% 10% 0%;
-     /* background-color: #fff; */
    }
    
    #verification_btn{
        width: 200px;
        height: 200px;
        display: inline-block;
-       text-align: center;
-       border-radius: 50%;
-       object-position: center;
-       background-position: center;
-       object-fit: contain;
-       background-repeat: no-repeat;
+       border-radius: 100%;
        animation: checkmark 2s;
    }
+
    #verification_btn img {
-      
+    width: 200px;
+    height: 200px;
    }
    
+   
    @keyframes checkmark {
-       0%   {background-color: #26E450;}
-       100% {background-color: #fff;}
-     }
+    0%   {background-color: #26E450;}
+    100% {background-color: #fff;}
+  }
    
    .container h1{
    position: relative;
