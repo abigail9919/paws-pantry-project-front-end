@@ -19,10 +19,11 @@ function Home() {
             {<Nav />}
             <img className = "jaguar-image" src={jaguar} alt="Stuffed Jaguar"/>
 
+            <article>
+
             {<AsideNav />}
             {<LocationHours />}
 
-            <article>
                 <div className="word-content">
                 <div className = "breadcrumbs">
                     <a href="#">Home</a> / 
@@ -59,10 +60,9 @@ function Home() {
             <div className = "bottom-content">
                 <h3>Support Paws' Pantry Today</h3>
                 <button>GIVE NOW</button>
-                {<Socials />}
-
-                {<Footer />}
             </div>
+            {<Socials />}
+            {<Footer />}
         </div>
     );
 };

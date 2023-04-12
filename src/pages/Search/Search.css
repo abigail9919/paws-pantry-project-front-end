@@ -4,20 +4,22 @@
 article {
     width: 100%;
     line-height: 1.5;
-    
+    height: 120vh;
 }
 
 h1 {
     text-align: center;
     font-size: xx-large;
-    
+    position: relative;
+    top: 15%;
 }
 
 .breadcrumbs {
     position: relative;
     font-size: small;
-    left: 5%;
-    top: 2%;
+    text-align: center;
+    top: 8%;
+    overflow-y: hidden;
   }
   
   .breadcrumbs a {
@@ -32,4 +34,10 @@ form {
 
 form label {
     font-weight: 100;
+}
+
+form input {
+    font-size: large;
+    letter-spacing: 1px;
+    font-weight: 550;
 }
