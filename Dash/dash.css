@@ -1,53 +1,57 @@
-body{
+body {
     margin: 0;
     background-color: #F8F8F8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-nav{
+nav {
     background-color: #990000;
     margin: 0;
     height: 100px;
     width: 100%;
 }
 
-nav img{
+nav img {
     height: 100px;
     object-fit: contain;
     max-height: 100%;
 }
 
-nav li{
+nav li {
     list-style-type: none;
     display: inline;
 }
 
-nav a{
+nav a {
     text-decoration: none;
     color: white;
     font-size: 25px;
 }
 
-a:hover{
+a:hover {
     color: black;
 }
 
-#nav{
+#nav {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 100px;
 }
 
-.nav{
+.nav {
     display: flex;
     flex-direction: row;
     gap: 150px;
 }
 
-footer{
+footer {
     height: 20px;
     width: 100%;
-    position: absolute;
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
+    margin-top: auto;
     background-color: #990000;
 }

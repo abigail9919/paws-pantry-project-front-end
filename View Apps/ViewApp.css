@@ -1,53 +1,70 @@
-body{
-    margin: 0;
-    background-color: #F8F8F8;
+#appLayout{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 240px;
+    font-size: x-large;
 }
 
-nav{
-    background-color: #990000;
-    margin: 0;
-    height: 100px;
-    width: 100%;
+hr{
+    width: 850px;
 }
 
-nav img{
-    height: 100px;
-    object-fit: contain;
-    max-height: 100%;
+#displayApps{
+    display: flex;
+    justify-content: center;
 }
 
-nav li{
-    list-style-type: none;
-    display: inline;
+#noMoreApps{
+    padding-top: 50px;
 }
 
-nav a{
-    text-decoration: none;
-    color: white;
-    font-size: 25px;
+#search-bar{
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
-a:hover{
-    color: black;
+.appList{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 850px;
+    margin: 0 auto;
 }
 
-#nav{
+.arrowBtn{
+    background-color: white;
+    border-color: white;
+    border-style: solid;
+    font-size: large;
+}
+
+.appList button:hover{
+    font-size: x-large;
+}
+
+.app{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 100px;
+    background-color: white;
+    border-radius: 15px;
+    justify-content: space-around;
 }
 
-.nav{
+.app p{
+    width: 100px;
+}
+
+.appListItems{
     display: flex;
     flex-direction: row;
-    gap: 150px;
+    font-size: larger;
+    gap: 220px;
 }
 
-footer{
-    height: 20px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    background-color: #990000;
+.appExpanded{
+    height: 200px;
+    display: flex;
+    flex-direction: row;
 }
