@@ -1,3 +1,7 @@
+#noMoreApps {
+    text-align: center;
+}
+
 #appLayout{
     display: flex;
     flex-direction: row;

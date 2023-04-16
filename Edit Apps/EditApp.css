@@ -1,53 +1,133 @@
-body{
-    margin: 0;
-    background-color: #F8F8F8;
+#noMoreApps {
+    text-align: center;
 }
 
-nav{
-    background-color: #990000;
-    margin: 0;
-    height: 100px;
-    width: 100%;
+#appLayout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 200px;
+    font-size: x-large;
 }
 
-nav img{
-    height: 100px;
-    object-fit: contain;
-    max-height: 100%;
+hr {
+    width: 850px;
+    margin-top: -20px;
 }
 
-nav li{
-    list-style-type: none;
-    display: inline;
+#displayApps {
+    display: flex;
+    justify-content: center;
 }
 
-nav a{
-    text-decoration: none;
-    color: white;
-    font-size: 25px;
+#noMoreApps {
+    padding-top: 50px;
 }
 
-a:hover{
-    color: black;
+#search-bar {
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
-#nav{
+.appList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 850px;
+    margin: 0 auto;
+}
+
+.arrowBtn {
+    background-color: white;
+    border-color: white;
+    border-style: solid;
+    font-size: large;
+}
+
+.appList button:hover {
+    font-size: x-large;
+}
+
+.app {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 100px;
+    background-color: white;
+    border-radius: 15px;
+    justify-content: space-around;
 }
 
-.nav{
+.app p {
+    width: 100px;
+}
+
+.appListItems {
     display: flex;
     flex-direction: row;
-    gap: 150px;
+    font-size: larger;
+    gap: 160px;
 }
 
-footer{
-    height: 20px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
+.appExpanded {
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+}
+
+.popUp {
+    /* position: absolute; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 500px;
+    width: 850px;
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.inputForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 400px;
+    margin-top: 20px;
+}
+
+.inputForm input {
+    height: 55px;
+    font-size: larger;
+}
+
+.formLabel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.formLabel h2{
+    height: 25px;
+}
+
+.inputFormButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.inputFormButtons button{
     background-color: #990000;
+    color: white;
+    border-color: white;
+    border-style: solid;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: 200;
+    height: 50px;
+    margin-top: -100px;
+}
+
+.hideStuff {
+    display: none;
 }

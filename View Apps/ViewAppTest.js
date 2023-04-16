@@ -20,15 +20,19 @@ const apps = [
 let elements = [];
 
 let num = apps.length;
-let cycle = 0;
+
+if (elements.length === 0) {
+    document.getElementById("noMoreApps").style.display = "block";
+}
 
 //Makes App List Element
 function eleMaker() {
-    cycle = 0;
+
+    document.getElementById("noMoreApps").style.display = "none";
+
     for (let obj in apps) {
         let x = apps[obj];
         elements.push(new app(x.name, x.date, x.time));
-        cycle++;
     }
 }
 

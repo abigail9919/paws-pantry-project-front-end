@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
 
+    <script src="EditApp.js" defer></script>
+    <link rel="stylesheet" href="/Dash/dash.css">
     <link rel="stylesheet" href="EditApp.css">
 </head>
 
@@ -18,11 +20,28 @@
             <li class="navItem"><a href="/Dash/dash.html">Dashboard</a></li>
             <li class="navItem"><a href="/View Apps/ViewApp.html">View Appointments</a></li>
             <li class="navItem"><a href="/Create Apps/CreateApp.html">Create Appointments</a></li>
-            <li class="navItem"><a style="text-decoration: underline;" href="/Edit Apps/EditApp.html">Edit Appointments</a></li>
+            <li class="navItem"><a style="text-decoration: underline;" href="/Edit Apps/EditApp.html">Edit
+                    Appointments</a></li>
         </div>
     </nav>
 
-    <h1>Edit App</h1>
+    <button onclick="eleMaker()">Click to Load Orders</button>
+
+    <div id="appLayout">
+        <p>Name:</p>
+        <p>Date:</p>
+        <p>Time:</p>
+    </div>
+    <hr>
+
+    <div id="showApps">
+        <div id="displayNoMoreApps">
+            <h1 id="noMoreApps" style="display: none;">You have no more Appointments!</h1>
+        </div>
+        <div class="appList">
+            <!-- Show apps Here -->
+        </div>
+    </div>
 
     <footer></footer>
 
