@@ -1,9 +1,10 @@
 * {
     overflow-x: hidden;
 }
-article {
+.searchArticle {
     width: 100%;
     line-height: 1.5;
+    height: 120vh;
 }
 
 .search-size {
