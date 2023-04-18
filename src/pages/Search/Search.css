@@ -4,6 +4,9 @@
 article {
     width: 100%;
     line-height: 1.5;
+}
+
+.search-size {
     height: 120vh;
 }
 

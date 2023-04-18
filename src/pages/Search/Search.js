@@ -12,6 +12,7 @@ function Search() {
         <div className = "search-page-wrapper">
             {<SearchBar />}
             {<Nav />}
+            <div className="search-size">
             <article>
             {<AsideNav />}
             {<LocationHours />}
@@ -30,6 +31,7 @@ function Search() {
                     {<Button title="Search" location="/Forms"/>}
                 </form>
             </article>
+            </div>
             {<Socials />}
             {<Footer />}
 
