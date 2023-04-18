@@ -30,7 +30,7 @@ h1 {
     color:lightslategray;
   }
 
-form {
+#student-search {
     position: relative;
     top: 20%;
     text-align: center;

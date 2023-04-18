@@ -8,7 +8,7 @@ function Forms() {
         <div className='forms-home'>
             {<SearchBar />}
             {<Nav />}
-            <article>
+            <article className='forms-article'>
             {<AsideNav />}
             <form id="paws-form" action="#" method="get">
                 <header><h1>Paws' Pantry Intake Form</h1></header>
@@ -57,7 +57,7 @@ function Forms() {
                 <br />
 
                 <label class="little-label">Postal/Zip Code</label>
-                <label class="little-label label-positioning">Country</label>
+                <label class="little-label different-label-positioning">Country</label>
                 <br />
                 <input type="text" class="medium" id="postal" name="address" required="" minlength="1" maxlength="60"></input>
                 <input type="text" class="medium" id="country" name="address" required="" minlength="1" maxlength="60"></input>
