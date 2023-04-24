@@ -12,7 +12,7 @@ function Search() {
         <div className = "search-page-wrapper">
             {<SearchBar />}
             {<Nav />}
-            <article>
+            <article className="searchArticle">
             {<AsideNav />}
             {<LocationHours />}
                 <div className = "breadcrumbs">

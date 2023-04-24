@@ -1,13 +1,19 @@
+.forms-home {
+    overflow-y: hidden;
+}
+
 #paws-form {
     text-align: left;
     z-index: 2;
-    width: 75%;
+    width: 70%;
     position: relative;
-    left: 20%;
-    top: 10%;
+    left: 25%;
+    top: 50px;
     margin-left: 10px;
-    overflow-y: visible;
-    background-color: lightsalmon;
+}
+
+.forms-article {
+    position: relative;
 }
 
 #paws-form h1 {
@@ -34,7 +40,7 @@ input[type=text] {
 }
 
 .medium {
-    width: 50%;
+    width: 48%;
 }
 
 .little-label {
@@ -42,7 +48,11 @@ input[type=text] {
 }
 
 .label-positioning {
-    margin-left: 50%;
+    margin-left: 47%;
+}
+
+.different-label-positioning {
+    margin-left: 39.5%;
 }
 
 .dots {

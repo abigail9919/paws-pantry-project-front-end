@@ -1,9 +1,13 @@
 * {
     overflow-x: hidden;
 }
-article {
+.searchArticle {
     width: 100%;
     line-height: 1.5;
+    height: 120vh;
+}
+
+.search-size {
     height: 120vh;
 }
 
@@ -26,7 +30,7 @@ h1 {
     color:lightslategray;
   }
 
-form {
+#student-search {
     position: relative;
     top: 20%;
     text-align: center;
