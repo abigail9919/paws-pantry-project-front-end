@@ -91,7 +91,8 @@ function Forms() {
 
                 <div class="dots"></div>
 
-                
+                <label><b>Current source of income/resources: click all that apply. This information will not affect your eligibility to use the pantry. *</b></label>
+                <input type="checkbox" id="income-source" name="income-source"></input>
 
             </form>
             </article>
