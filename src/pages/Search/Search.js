@@ -28,6 +28,7 @@ function Search() {
                     <label>Student ID #: </label>
                     <input type="text" id="student-id" name="student-id" size="20" required minlength="10" placeholder='200*******' aria-label='Enter student ID Number'></input><br/><br/>
                     {<Button title="Search" location="/Forms"/>}
+                    {<Button title="Search (Upcoming)" location="/UpcomingAppointment"/>}
                 </form>
             </article>
             {<Socials />}
