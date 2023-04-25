@@ -8,13 +8,18 @@ import Footer from '../components/Footer/Footer';
 import Button from '../components/Button/Button';
 import '../UpcomingAppointment/Accordion.css'; 
 import React, { useState, useEffect } from "react";
-
-
+import { Routes, Route, useParams } from 'react-router-dom';
+import axios from "axios";
 
 function UpcomingAppointment() {
     const [isOpen, setIsOpen] = useState(false);
     const [isOpen2, setIsOpen2] = useState(false);
     const [isOpen3, setIsOpen3] = useState(false);
+    const [clients, setClient] = useState();
+    const [appointments, setAppointments] = useState();
+    const { clientID } = useParams();
+    const { firstName } = useParams();
+
 
     const toggleAccordion = () => {
         setIsOpen(!isOpen);
@@ -25,6 +30,32 @@ function UpcomingAppointment() {
     const toggleAccordion3 = () => {
         setIsOpen3(!isOpen3);
     };
+
+    useEffect(() => {
+        const getUser= () => {
+            axios.get(`http://localhost:8000/api/v1/clients/${clientID}/${firstName}`)
+            .then(res => {
+              setClient(res.data);
+            })
+            .catch(err => {
+              console.log(err);
+            });
+        };
+        getUser();
+        // console.log(clients)
+        const getAppts = () => {
+            axios.get(`http://localhost:8000/api/v1/appointments/findAppointments/${clientID}`)
+            .then(res => {
+                setAppointments(res.data);
+                console.log(res.data + "for appts")
+            })
+              .catch(err => {
+                console.log(err);
+            });
+        };
+        getAppts();
+    }, 
+    []);
     
     return (
         <div >

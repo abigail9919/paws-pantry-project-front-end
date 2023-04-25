@@ -8,9 +8,11 @@ import Footer from '../components/Footer/Footer';
 import Button from '../components/Button/Button';
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 function Search() {
     const [errorMessage, setErrorMessage] = useState("");
+    const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -25,6 +27,7 @@ function Search() {
         })
         .then((response) => {
           console.log(response.data[0]);
+          navigate(`/UpcomingAppointment/${clientID}/${firstName}`);
         })
         .catch((error) => {
           alert("There was an issues getting client data");

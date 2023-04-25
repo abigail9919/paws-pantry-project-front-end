@@ -13,7 +13,8 @@ function App() {
           <Route path="/" element = {<Home/>} />
           <Route path="/Search" element = {<Search/>} />
           <Route path="/Forms" element = {<Forms/>} />
-          <Route path="/UpcomingAppointment" element = {<UpcomingAppointment/>} />
+          {/* <Route path="/UpcomingAppointment" element = {<UpcomingAppointment/>} /> */}
+          <Route path="/UpcomingAppointment/:clientID/:firstName" element = {<UpcomingAppointment/>} />
         </Routes>
       </BrowserRouter>
     </div>
