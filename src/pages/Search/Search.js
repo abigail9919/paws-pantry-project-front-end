@@ -25,8 +25,11 @@ function Search() {
                 <h1>Appointment Search</h1>
 
                 <form id="student-search" action="#" method="get">
-                    <label>Student ID #: </label>
-                    <input type="text" id="student-id" name="student-id" size="20" required minlength="10" placeholder='200*******' aria-label='Enter student ID Number'></input><br/><br/>
+                    <label>IU ID Number: </label>
+                    <input type="text" id="student-id" name="ClientID" size="20" required minLength="10" placeholder='200*******' aria-label='Enter IU ID Number'></input><br/><br/>
+                <br></br>
+                    <label>First Name: </label>
+                    <input type="text" id="studentName" name="studentName" size="20" required minLength="10" placeholder='First Name' aria-label='Enter Name'></input><br/><br/>
                     {<Button title="Search" location="/Forms"/>}
                     {<Button title="Search (Upcoming)" location="/UpcomingAppointment"/>}
                 </form>
