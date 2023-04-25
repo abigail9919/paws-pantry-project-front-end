@@ -1,4 +1,3 @@
-// import './Search.css';
 import SearchBar from '../components/SearchBar/SearchBar';
 import Nav from '../components/Nav/Nav';
 import AsideNav from '../components/AsideNav/AsideNav';
@@ -55,58 +54,41 @@ function UpcomingAppointment() {
             });
         }
     };
-
-    // const getAppts = () => {
-    //     axios.get(`http://localhost:8000/api/v1/appointments/findAppointments/${clientID}`)
-    //       .then(res => {
-    //         setAppointments(res.data);
-    //         const appointmentIDs = res.data.map(appointment => appointment.timeSlotID);
-    //         getApptData(appointmentIDs);
-    //       })
-    //       .catch(err => {
-    //         console.log(err);
-    //       });
-    // };
+      
+    // useEffect(() => {
+    //     const getApptData = async (appointmentIDs) => {
+    //       if (appointmentIDs.length > 0) {
+    //         try {
+    //             const apiRequests = appointmentIDs.map(element => {
+    //                 console.log(`http://localhost:8000/api/v1/timeslots/findTimeslots/${element}`)
+    //                 return axios.get(`http://localhost:8000/api/v1/timeslots/findTimeslots/${element}`);
+    //             });
         
-    //   useEffect(() => {
+    //             const responses = await Promise.all(apiRequests);
+    //             const timeslotsData = responses.map(res => res.data);
+    //             setTimeslot(timeslotsData[0]);
+    //         } catch (err) {
+    //             console.log(err);
+    //         }
+    //       }
+    //     };
+      
+    //     const getAppts = () => {
+    //       axios.get(`http://localhost:8000/api/v1/appointments/findAppointments/${clientID}`)
+    //         .then(res => {
+    //           setAppointments(...res.data);
+    //           console.log(...res.data)
+    //           const appointmentIDs = res.data.map(appointment => appointment.timeSlotID);
+    //           getApptData(appointmentIDs);
+    //         })
+    //         .catch(err => {
+    //           console.log(err);
+    //         });
+    //     };
+        
     //     getAppts();
-    //   }, []);
-      
-    useEffect(() => {
-        const getApptData = async (appointmentIDs) => {
-          if (appointmentIDs.length > 0) {
-            try {
-              const apiRequests = appointmentIDs.map(element => {
-                return axios.get(`http://localhost:8000/api/v1/timeslots/findTimeslots/${element}`);
-              });
-      
-              const responses = await Promise.all(apiRequests);
-              const timeslotsData = responses.map(res => res.data);
-              setTimeslot(timeslotsData);
-            } catch (err) {
-              console.log(err);
-            }
-          }
-        };
-      
-        const getAppts = () => {
-          axios.get(`http://localhost:8000/api/v1/appointments/findAppointments/${clientID}`)
-            .then(res => {
-              setAppointments(...res.data);
-              console.log(...res.data)
-              const appointmentIDs = res.data.map(appointment => appointment.timeSlotID);
-              getApptData(appointmentIDs);
-            })
-            .catch(err => {
-              console.log(err);
-            });
-        };
-        
-        getAppts();
-        console.log(...timeslots)
-      }, []);
-      
-
+    //     console.log(timeslots)
+    //   }, []);    
 
     useEffect(() => {
         const getUser= () => {
@@ -153,6 +135,39 @@ function UpcomingAppointment() {
         };
         getTimeslotsbyDayThur();
         // console.log(timeslotsbyDayThur)
+        const getAppts = () => {
+            axios.get(`http://localhost:8000/api/v1/appointments/findAppointments/${clientID}`)
+                .then(res => {
+                    setAppointments(...res.data);
+                    // console.log(...res.data)
+                    const appointmentIDs = res.data.map(appointment => appointment.timeSlotID);
+                    getApptData(appointmentIDs);
+                })
+                .catch(err => {
+                    console.log(err);
+                });
+        };
+        
+        getAppts();
+
+        const getApptData = async (appointmentIDs) => {
+            if (appointmentIDs.length > 0) {
+              try {
+                const apiRequests = appointmentIDs.map(element => {
+                  return axios.get(`http://localhost:8000/api/v1/timeslots/findTimeslots/${element}`);
+                });
+          
+                const responses = await Promise.all(apiRequests);
+                const timeslotsData = responses.map(res => res.data[0]);
+                setTimeslot(timeslotsData);
+                // console.log(...timeslotsData); // Log here instead
+              } catch (err) {
+                console.log(err);
+              }
+            }
+        };
+    
+        console.log(timeslots)
     }, 
     []);
     
@@ -163,12 +178,6 @@ function UpcomingAppointment() {
             <article>
             {<AsideNav />}
             {<LocationHours />}
-                {/* <div className = "breadcrumbs">
-                    <a href="#">Home</a> / 
-                    <a href="#">Advocacy & Resources</a> /
-                    <a href="#">Upcoming Appointment</a>
-                    <br />
-                </div> */}
 
                 <div className='apptContent'>
                     <h1>Upcoming Appointment</h1>
