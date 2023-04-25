@@ -19,6 +19,8 @@ function UpcomingAppointment() {
     const [appointments, setAppointments] = useState();
     const [timeslots, setTimeslot] = useState();
     const [timeslotsbyDay, setTimeslotbyDay] = useState();
+    const [timeslotsbyDayWed, setTimeslotbyDayWed] = useState();
+    const [timeslotsbyDayThur, setTimeslotbyDayThur] = useState();
     const { clientID } = useParams();
     const { firstName } = useParams();
 
@@ -33,7 +35,9 @@ function UpcomingAppointment() {
         setIsOpen3(!isOpen3);
     };
 
-    const handleCreateAppointment = () => {};
+    const handleCreateAppointment = () => {
+        console.log("hello")
+    };
 
 
     useEffect(() => {
@@ -84,7 +88,29 @@ function UpcomingAppointment() {
             });
         };
         getTimeslotsbyDay();
-        console.log(timeslotsbyDay)
+
+        const getTimeslotsbyDayWed = () => {
+            axios.get(`http://localhost:8000/api/v1/timeslots/Wednesday`)
+            .then(res => {
+                setTimeslotbyDayWed(res.data);
+            })
+              .catch(err => {
+                console.log(err);
+            });
+        };
+        getTimeslotsbyDayWed();
+
+        const getTimeslotsbyDayThur = () => {
+            axios.get(`http://localhost:8000/api/v1/timeslots/Thursday`)
+            .then(res => {
+                setTimeslotbyDayThur(res.data);
+            })
+              .catch(err => {
+                console.log(err);
+            });
+        };
+        getTimeslotsbyDayThur();
+        // console.log(timeslotsbyDayThur)
     }, 
     []);
     
@@ -129,34 +155,34 @@ function UpcomingAppointment() {
                         </div>
                         {isOpen && (
                             <div className="accordion-content">
-                            <table className="time-slot-table">
-                            <thead>
-                            <tr>
-                                <th>Day</th>
-                                <th>Time</th>
-                                <th>Availability</th>
-                                <th>Create Appointment</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            {timeslotsbyDay.map((timeSlot) => (
-                                <tr key={timeSlot.timeSlotID}>
-                                    <td>{timeSlot.day}</td>
-                                    <td>{timeSlot.time}</td>
-                                    <td>{timeSlot.filled ? 'Unavailable' : 'Available'}</td>
-                                    <td>
-                                        {timeSlot.filled ? (
-                                            <button disabled>No Appointment</button>
-                                        ) : (
-                                            <button onClick={() => handleCreateAppointment(timeSlot.timeSlotID)}>
-                                                Create
-                                            </button>
-                                        )}
-                                    </td>
-                                </tr>
-                            ))}
-                            </tbody>
-                        </table>
+                                <table className="time-slot-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Day</th>
+                                            <th>Time</th>
+                                            <th>Availability</th>
+                                            <th>Create Appointment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {timeslotsbyDay.map((timeSlot) => (
+                                        <tr key={timeSlot.timeSlotID}>
+                                            <td>{timeSlot.day}</td>
+                                            <td>{timeSlot.time}</td>
+                                            <td>{timeSlot.filled ? 'Unavailable' : 'Available'}</td>
+                                            <td>
+                                                {timeSlot.filled ? (
+                                                    <button disabled>No Appointment</button>
+                                                ) : (
+                                                    <button onClick={() => handleCreateAppointment(timeSlot.timeSlotID)}>
+                                                        Create
+                                                    </button>
+                                                )}
+                                            </td>
+                                        </tr>
+                                    ))}
+                                    </tbody>
+                                </table>
                             </div>
                         )}
                     </div>
@@ -167,7 +193,34 @@ function UpcomingAppointment() {
                         </div>
                         {isOpen2 && (
                             <div className="accordion-content">
-                            <p className="accordion-text">content</p>
+                                <table className="time-slot-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Day</th>
+                                            <th>Time</th>
+                                            <th>Availability</th>
+                                            <th>Create Appointment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {timeslotsbyDayWed.map((timeSlot) => (
+                                        <tr key={timeSlot.timeSlotID}>
+                                            <td>{timeSlot.day}</td>
+                                            <td>{timeSlot.time}</td>
+                                            <td>{timeSlot.filled ? 'Unavailable' : 'Available'}</td>
+                                            <td>
+                                                {timeSlot.filled ? (
+                                                    <button disabled>No Appointment</button>
+                                                ) : (
+                                                    <button onClick={() => handleCreateAppointment(timeSlot.timeSlotID)}>
+                                                        Create
+                                                    </button>
+                                                )}
+                                            </td>
+                                        </tr>
+                                    ))}
+                                    </tbody>
+                                </table>
                             </div>
                         )}
                     </div>
@@ -178,7 +231,34 @@ function UpcomingAppointment() {
                         </div>
                         {isOpen3 && (
                             <div className="accordion-content">
-                            <p className="accordion-text">content</p>
+                                  <table className="time-slot-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Day</th>
+                                            <th>Time</th>
+                                            <th>Availability</th>
+                                            <th>Create Appointment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {timeslotsbyDayThur.map((timeSlot) => (
+                                        <tr key={timeSlot.timeSlotID}>
+                                            <td>{timeSlot.day}</td>
+                                            <td>{timeSlot.time}</td>
+                                            <td>{timeSlot.filled ? 'Unavailable' : 'Available'}</td>
+                                            <td>
+                                                {timeSlot.filled ? (
+                                                    <button disabled>No Appointment</button>
+                                                ) : (
+                                                    <button onClick={() => handleCreateAppointment(timeSlot.timeSlotID)}>
+                                                        Create
+                                                    </button>
+                                                )}
+                                            </td>
+                                        </tr>
+                                    ))}
+                                    </tbody>
+                                </table>
                             </div>
                         )}
                     </div>
