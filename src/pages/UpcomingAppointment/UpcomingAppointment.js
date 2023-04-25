@@ -17,6 +17,7 @@ function UpcomingAppointment() {
     const [isOpen3, setIsOpen3] = useState(false);
     const [clients, setClient] = useState();
     const [appointments, setAppointments] = useState();
+    const [timeslots, setTimeslot] = useState();
     const { clientID } = useParams();
     const { firstName } = useParams();
 
@@ -46,14 +47,28 @@ function UpcomingAppointment() {
         const getAppts = () => {
             axios.get(`http://localhost:8000/api/v1/appointments/findAppointments/${clientID}`)
             .then(res => {
-                setAppointments(res.data);
-                console.log(res.data + "for appts")
+                setAppointments(res.data[0].timeSlotID);
+                // console.log(res.data + "for appts")
             })
               .catch(err => {
                 console.log(err);
             });
         };
         getAppts();
+        const appointmentData = appointments;
+        // console.log(appointmentData)
+
+        const getApptData = () => {
+            axios.get(`http://localhost:8000/api/v1/timeslots/findTimeslots/${appointmentData}`)
+            .then(res => {
+                setTimeslot(res.data);
+            })
+              .catch(err => {
+                console.log(err);
+            });
+        };
+        getApptData();
+        console.log(timeslots)
     }, 
     []);
     
