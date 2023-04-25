@@ -1,62 +1,21 @@
-.IU-logo {
-    width: 120px;
-    height: auto;
-    position: relative;
-    left: 100px;
-    top: 15px;
-  }
-  
-  .upper-header {
-    width: 100%;
-    height: 15vh;
-    border-bottom: 1px solid gainsboro;
-  }
-  
-  .nav-wrapper {
-    display: inline;
-    position: absolute;
-    right: 10%;
-    top: 5%;
-  }
-  
-  a {
-    padding: 15px;
-    text-decoration: none;
-    color: black;
-  }
-  
-  nav {
-    margin-left: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  
-  .red-bottom {
-    border-bottom: 4px solid #900;
-  }
-  
-  .student-affairs-header {
-    margin-left: 100px;
-    font-size: xx-large;
-    margin-top: 10px;
-  }
-  
-  .jaguar-image {
+.jaguar-image {
     width: 100%;
     overflow: hidden;
     z-index: 0;
-  }
+}
   
   article {
     position: relative;
-    left: 25%;
-    width: 75%;
+    width: 100%;
     line-height: 1.5;
+    top: -50px;
+    overflow-y: hidden;
   }
   
   .breadcrumbs {
+    position: relative;
     font-size: small;
+    z-index: -2;
   }
   
   .breadcrumbs a {
@@ -70,11 +29,11 @@
   
   .word-content {
     position: relative;
-    z-index: 1;
-    top: -70px;
+    left: 25%;
+    z-index: 2;
     background-color: white;
     font-size: 1.125rem;
-    width: 66%;
+    width: 50%;
     padding: 0.75rem;
   }
   
@@ -97,49 +56,13 @@
     margin-bottom: 8px;
   }
   
-  .location-and-hours {
-    width: 25%;
-    position: absolute;
-    right: 3%;
-    top: 50px;
-    border-top: 5px solid gainsboro;
-  }
-  
-  .location-and-hours h2 {
-    color: #990000;
-    font-weight: 600;
-  }
-  
-  .location-and-hours h3{
-    font-size: large;
-    margin-left: 0px;;
-  }
-  
-  .left-side-nav {
-    display: flex;
-    flex-direction: column;
-    width: 15%;
-    position: absolute;
-    left: 5%;
-    top: 115%;
-  }
-  
-  .gray {
-    background-color:whitesmoke;
-  }
-  
-  .red {
-    border-left: 4px solid #990000;
-  }
-  
-  /* ----- BUTTON STYLING ----- */
   .button-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     line-height: 1rem;
     position: relative;
-    top: -50px;
+    top: 15px;
   }
   
   label {
@@ -168,7 +91,7 @@
     width: 750px;
     position: relative;
     left: 25%;
-    top: -20px;
+    top: -10px;
   }
   
   .questions-wrapper h3 {
@@ -190,8 +113,8 @@
     color: white;
     font-size: x-large;
     text-align: center;
-    height: 250px;
-    padding-top: 30px;
+    height: 150px;
+    padding-top: 0px;
   }
   
   .bottom-content button {
@@ -203,55 +126,4 @@
   .bottom-content button:hover {
     background-color: white;
     color: #800000;
-  }
-  
-  .social-links {
-    background-color: #800000;
-    height: 100px;
-    text-align: left;
-    font-size:x-large;
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .socialFlex {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    position: relative;
-    
-  }
-
-  .socialFlex img {
-    padding: 10px;
-    width: 55px;
-  }
-
-  footer {
-    height: 150px;
-    position: relative;
-    top: 40px;
-  }
-
-  footer img {
-    width: 250px;
-    z-index: 1;
-  }
-
-  .footerFlex {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .links {
-    color: black;
-  }
-
-  .links a {
-    font-size: medium;
-    color: #900;
-    padding: 5px;
   }

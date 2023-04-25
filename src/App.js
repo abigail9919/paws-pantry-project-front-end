@@ -1,9 +1,9 @@
 import Home from './pages/Home/Home';
 import Search from './pages/Search/Search';
-
-import Students from './pages/roster/studentRoster';
+import Forms from './pages/Forms/Forms';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import UpcomingAppointment from './pages/UpcomingAppointment/UpcomingAppointment';
 
 function App() {
   return (
@@ -12,7 +12,8 @@ function App() {
         <Routes>
           <Route path="/" element = {<Home/>} />
           <Route path="/Search" element = {<Search/>} />
-          <Route path="/admin/savedroster" element = {<Students/>} />
+          <Route path="/Forms" element = {<Forms/>} />
+          <Route path="/UpcomingAppointment" element = {<UpcomingAppointment/>} />
         </Routes>
       </BrowserRouter>
     </div>
