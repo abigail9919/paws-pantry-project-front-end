@@ -16,11 +16,12 @@ function UpcomingAppointment() {
     const [isOpen2, setIsOpen2] = useState(false);
     const [isOpen3, setIsOpen3] = useState(false);
     const [clients, setClient] = useState();
-    const [appointments, setAppointments] = useState();
-    const [timeslots, setTimeslot] = useState();
+    const [appointments, setAppointments] = useState([]);
+    const [timeslots, setTimeslot] = useState([]);
     const [timeslotsbyDay, setTimeslotbyDay] = useState();
     const [timeslotsbyDayWed, setTimeslotbyDayWed] = useState();
     const [timeslotsbyDayThur, setTimeslotbyDayThur] = useState();
+    const [errorMessage, setErrorMessage] = useState("");
     const { clientID } = useParams();
     const { firstName } = useParams();
 
@@ -35,9 +36,76 @@ function UpcomingAppointment() {
         setIsOpen3(!isOpen3);
     };
 
-    const handleCreateAppointment = () => {
-        console.log("hello")
+    const handleCreateAppointment = (timeID) => {
+        // console.log(timeID)
+        if (window.confirm('Are you sure you want to create a new appointment?')) {
+            axios.post("http://localhost:8000/api/v1/appointments/newAppointments", {
+                    clientID: clientID,
+                    timeSlotID: timeID,
+                })
+            .then((response) => {
+                alert('New appointment added successfully!');
+                console.log(response);
+                window.location.reload();
+            })
+            .catch((error) => {
+                alert("There was an issues creating appointment");
+                console.log(error.response.data.message);
+                setErrorMessage(error.response.data.message);
+            });
+        }
     };
+
+    // const getAppts = () => {
+    //     axios.get(`http://localhost:8000/api/v1/appointments/findAppointments/${clientID}`)
+    //       .then(res => {
+    //         setAppointments(res.data);
+    //         const appointmentIDs = res.data.map(appointment => appointment.timeSlotID);
+    //         getApptData(appointmentIDs);
+    //       })
+    //       .catch(err => {
+    //         console.log(err);
+    //       });
+    // };
+        
+    //   useEffect(() => {
+    //     getAppts();
+    //   }, []);
+      
+    useEffect(() => {
+        const getApptData = async (appointmentIDs) => {
+          if (appointmentIDs.length > 0) {
+            try {
+              const apiRequests = appointmentIDs.map(element => {
+                return axios.get(`http://localhost:8000/api/v1/timeslots/findTimeslots/${element}`);
+              });
+      
+              const responses = await Promise.all(apiRequests);
+              const timeslotsData = responses.map(res => res.data);
+              setTimeslot(timeslotsData);
+            } catch (err) {
+              console.log(err);
+            }
+          }
+        };
+      
+        const getAppts = () => {
+          axios.get(`http://localhost:8000/api/v1/appointments/findAppointments/${clientID}`)
+            .then(res => {
+              setAppointments(...res.data);
+              console.log(...res.data)
+              const appointmentIDs = res.data.map(appointment => appointment.timeSlotID);
+              getApptData(appointmentIDs);
+            })
+            .catch(err => {
+              console.log(err);
+            });
+        };
+        
+        getAppts();
+        console.log(...timeslots)
+      }, []);
+      
 
 
     useEffect(() => {
@@ -51,32 +119,6 @@ function UpcomingAppointment() {
             });
         };
         getUser();
-        // console.log(clients)
-        const getAppts = () => {
-            axios.get(`http://localhost:8000/api/v1/appointments/findAppointments/${clientID}`)
-            .then(res => {
-                setAppointments(res.data[0].timeSlotID);
-                // console.log(res.data + "for appts")
-            })
-              .catch(err => {
-                console.log(err);
-            });
-        };
-        getAppts();
-        const appointmentData = appointments;
-        // console.log(appointmentData)
-
-        const getApptData = () => {
-            axios.get(`http://localhost:8000/api/v1/timeslots/findTimeslots/${appointmentData}`)
-            .then(res => {
-                setTimeslot(res.data[0]);
-            })
-              .catch(err => {
-                console.log(err);
-            });
-        };
-        getApptData();
-        // console.log(timeslots)
 
         const getTimeslotsbyDay = () => {
             axios.get(`http://localhost:8000/api/v1/timeslots/tuesday`)
@@ -132,18 +174,18 @@ function UpcomingAppointment() {
                     <h1>Upcoming Appointment</h1>
                     <table className="time-slot-table">
                         <thead>
-                        <tr>
+                            <tr>
                             <th>Day</th>
                             <th>Time</th>
-                        </tr>
+                            </tr>
                         </thead>
                         <tbody>
-                        {timeslots && (
-                        <tr key={timeslots.timeSlotID}>
-                            <td>{timeslots.day}</td>
-                            <td>{timeslots.time}</td>
-                        </tr>
-                        )}
+                            {timeslots.map(timeslot => (
+                            <tr key={timeslot.timeSlotID}>
+                                <td>{timeslot.day}</td>
+                                <td>{timeslot.time}</td>
+                            </tr>
+                            ))}
                         </tbody>
                     </table>
 
