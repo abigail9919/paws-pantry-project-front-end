@@ -61,16 +61,20 @@ function UpcomingAppointment() {
         const getApptData = () => {
             axios.get(`http://localhost:8000/api/v1/timeslots/findTimeslots/${appointmentData}`)
             .then(res => {
-                setTimeslot(res.data);
+                setTimeslot(res.data[0]);
             })
               .catch(err => {
-                console.log(err);
+                // console.log(err);
             });
         };
         getApptData();
-        console.log(timeslots)
+        // console.log(timeslots)
     }, 
     []);
+
+    // useEffect(() => {
+    //     console.log(timeslots);
+    // }, [timeslots]);
     
     return (
         <div >
@@ -88,6 +92,22 @@ function UpcomingAppointment() {
 
                 <div className='apptContent'>
                     <h1>Upcoming Appointment</h1>
+                    <table className="time-slot-table">
+                        <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Time</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {timeslots && (
+                        <tr key={timeslots.timeSlotID}>
+                            <td>{timeslots.day}</td>
+                            <td>{timeslots.time}</td>
+                        </tr>
+                        )}
+                        </tbody>
+                    </table>
 
                     <h1>Create New Appointment</h1>
                     <div className="accordion-container">

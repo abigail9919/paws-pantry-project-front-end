@@ -36,3 +36,33 @@
 
     text-align: center;
   }
+
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .time-slot-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .time-slot-table th, .time-slot-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .time-slot-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .time-slot-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .time-slot-table tr:hover {
+    background-color: #ddd;
+  }
+  
