@@ -1,0 +1,38 @@
+.accordion-container {
+    margin-bottom: 10px;
+  }
+  
+  .accordion-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  
+  .accordion-title {
+    flex: 1;
+    margin: 0;
+  }
+  
+  .accordion-icon {
+    margin-left: 10px;
+  }
+  
+  .accordion-content {
+    background-color: #f9f9f9;
+    padding: 10px;
+  }
+  
+  .accordion-text {
+    margin: 0;
+  }
+
+  .apptContent{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+
+    text-align: center;
+  }
