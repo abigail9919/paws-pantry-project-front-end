@@ -147,14 +147,13 @@ function Forms() {
                         required
                         minlength="1"
                         maxlength="60"
-                        pattern="^[A-Za-z]+\s[A-Za-z]+$"
                         onChange={(e) => {
                             setFirstName(e.target.value);
                             setFirstNameError(false);
                         }}
                     />                    
                     {firstNameError && <p className="error">Please enter a valid first name</p>}
-                    <input type="text" id="last-name" name="lastName" placeholder="Last" size="10" required minlength="1" maxlength="60" pattern="^[A-Za-z]+\s[A-Za-z]+$"></input>
+                    <input type="text" id="last-name" name="lastName" placeholder="Last" size="10" required minlength="1" maxlength="60"></input>
                     <br /><br />
 
                     {/* UNIVERSITY ID NUMBER */}
@@ -207,13 +206,13 @@ function Forms() {
                     <div class="dots"></div>
 
                     <label><b>What is your employment status? *</b></label><br />
-                    <input type="radio" id="full-time" name="employment" value="full-time" checked={employment === 'full-time'} onChange={() => setEmployment('full-time')} />
+                    <input type="radio" id="full-time" name="employment" value="Full-time" checked={employment === 'Full-time'} onChange={() => setEmployment('Full-time')} />
                     <label htmlFor="full-time">Full time</label><br />
-                    <input type="radio" id="part-time" name="employment" value="part-time" checked={employment === 'part-time'} onChange={() => setEmployment('part-time')} />
+                    <input type="radio" id="part-time" name="employment" value="Part-time" checked={employment === 'Part-time'} onChange={() => setEmployment('Part-time')} />
                     <label htmlFor="part-time">Part time</label><br />
-                    <input type="radio" id="unemployed" name="employment" value="unemployed" checked={employment === 'unemployed'} onChange={() => setEmployment('unemployed')} />
+                    <input type="radio" id="unemployed" name="employment" value="Unemployed" checked={employment === 'Unemployed'} onChange={() => setEmployment('Unemployed')} />
                     <label htmlFor="unemployed">Unemployed</label><br />
-                    <input type="radio" id="disabled" name="employment" value="disabled" checked={employment === 'disabled'} onChange={() => setEmployment('disabled')} />
+                    <input type="radio" id="disabled" name="employment" value="Disabled" checked={employment === 'Disabled'} onChange={() => setEmployment('Disabled')} />
                     <label htmlFor="disabled">Disabled</label><br />
                     <br /><br />
 
