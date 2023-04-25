@@ -8,7 +8,7 @@ import Footer from '../components/Footer/Footer';
 import Button from '../components/Button/Button';
 import '../UpcomingAppointment/Accordion.css'; 
 import React, { useState, useEffect } from "react";
-import { Routes, Route, useParams } from 'react-router-dom';
+import { Routes, Route, useParams, useHref } from 'react-router-dom';
 import axios from "axios";
 
 function UpcomingAppointment() {
@@ -18,6 +18,7 @@ function UpcomingAppointment() {
     const [clients, setClient] = useState();
     const [appointments, setAppointments] = useState();
     const [timeslots, setTimeslot] = useState();
+    const [timeslotsbyDay, setTimeslotbyDay] = useState();
     const { clientID } = useParams();
     const { firstName } = useParams();
 
@@ -31,6 +32,9 @@ function UpcomingAppointment() {
     const toggleAccordion3 = () => {
         setIsOpen3(!isOpen3);
     };
+
+    const handleCreateAppointment = () => {};
+
 
     useEffect(() => {
         const getUser= () => {
@@ -64,17 +68,25 @@ function UpcomingAppointment() {
                 setTimeslot(res.data[0]);
             })
               .catch(err => {
-                // console.log(err);
+                console.log(err);
             });
         };
         getApptData();
         // console.log(timeslots)
+
+        const getTimeslotsbyDay = () => {
+            axios.get(`http://localhost:8000/api/v1/timeslots/tuesday`)
+            .then(res => {
+                setTimeslotbyDay(res.data);
+            })
+              .catch(err => {
+                console.log(err);
+            });
+        };
+        getTimeslotsbyDay();
+        console.log(timeslotsbyDay)
     }, 
     []);
-
-    // useEffect(() => {
-    //     console.log(timeslots);
-    // }, [timeslots]);
     
     return (
         <div >
@@ -117,7 +129,34 @@ function UpcomingAppointment() {
                         </div>
                         {isOpen && (
                             <div className="accordion-content">
-                            <p className="accordion-text">content</p>
+                            <table className="time-slot-table">
+                            <thead>
+                            <tr>
+                                <th>Day</th>
+                                <th>Time</th>
+                                <th>Availability</th>
+                                <th>Create Appointment</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {timeslotsbyDay.map((timeSlot) => (
+                                <tr key={timeSlot.timeSlotID}>
+                                    <td>{timeSlot.day}</td>
+                                    <td>{timeSlot.time}</td>
+                                    <td>{timeSlot.filled ? 'Unavailable' : 'Available'}</td>
+                                    <td>
+                                        {timeSlot.filled ? (
+                                            <button disabled>No Appointment</button>
+                                        ) : (
+                                            <button onClick={() => handleCreateAppointment(timeSlot.timeSlotID)}>
+                                                Create
+                                            </button>
+                                        )}
+                                    </td>
+                                </tr>
+                            ))}
+                            </tbody>
+                        </table>
                             </div>
                         )}
                     </div>
