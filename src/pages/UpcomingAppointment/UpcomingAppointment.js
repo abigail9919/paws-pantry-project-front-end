@@ -180,25 +180,29 @@ function UpcomingAppointment() {
             {<LocationHours />}
 
                 <div className='apptContent'>
-                    <h1>Upcoming Appointment</h1>
+                    <h1>Upcoming Appointment This week</h1>
+                    {timeslots.length > 0 ? (
                     <table className="time-slot-table">
                         <thead>
                             <tr>
-                            <th>Day</th>
-                            <th>Time</th>
+                                <th>Day</th>
+                                <th>Time</th>
                             </tr>
                         </thead>
                         <tbody>
                             {timeslots.map(timeslot => (
-                            <tr key={timeslot.timeSlotID}>
-                                <td>{timeslot.day}</td>
-                                <td>{timeslot.time}</td>
-                            </tr>
+                                <tr key={timeslot.timeSlotID}>
+                                    <td>{timeslot.day}</td>
+                                    <td>{timeslot.time}</td>
+                                </tr>
                             ))}
                         </tbody>
                     </table>
+                ) : (
+                    <p>No appointment</p>
+                )}
 
-                    <h1>Create New Appointment</h1>
+                    <h1>Create New Appointment For The Week</h1>
                     <div className="accordion-container">
                         <div className="accordion-header" onClick={toggleAccordion}>
                             <h3 className="accordion-title">View Appointments for Tuesday</h3>
