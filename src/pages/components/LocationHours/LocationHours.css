@@ -1,0 +1,17 @@
+.location-and-hours {
+    width: 20%;
+    position: absolute;
+    right: 2%;
+    top: 15%;
+    border-top: 5px solid gainsboro;
+  }
+  
+  .location-and-hours h2 {
+    color: #990000;
+    font-weight: 600;
+  }
+  
+  .location-and-hours h3{
+    font-size: large;
+    margin-left: 0px;;
+  }

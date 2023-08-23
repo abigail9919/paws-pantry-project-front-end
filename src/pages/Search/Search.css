@@ -1,0 +1,53 @@
+* {
+    overflow-x: hidden;
+}
+.searchArticle {
+    width: 100%;
+    line-height: 1.5;
+    height: 120vh;
+}
+
+.search-size {
+    height: 120vh;
+}
+
+.searchTitle {
+    text-align: center;
+    font-size: xx-large;
+    position: relative;
+    top: 15%;
+}
+
+.searchText{
+    text-align: center;
+    position: relative;
+    top: 15%;
+}
+
+.breadcrumbs {
+    position: relative;
+    font-size: small;
+    text-align: center;
+    top: 8%;
+    overflow-y: hidden;
+  }
+  
+  .breadcrumbs a {
+    color:lightslategray;
+  }
+
+#student-search {
+    position: relative;
+    top: 20%;
+    text-align: center;
+}
+
+form label {
+    font-weight: 100;
+}
+
+form input {
+    font-size: large;
+    letter-spacing: 1px;
+    font-weight: 550;
+}
