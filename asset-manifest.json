@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/paws-pantry-project-front-end/static/css/main.a8aff835.css",
-    "main.js": "/paws-pantry-project-front-end/static/js/main.4ac9757a.js",
+    "main.css": "/paws-pantry-project-front-end/static/css/main.da569d06.css",
+    "main.js": "/paws-pantry-project-front-end/static/js/main.d762e10b.js",
     "static/js/787.b6b94058.chunk.js": "/paws-pantry-project-front-end/static/js/787.b6b94058.chunk.js",
     "static/media/stuffed-jaguar.jpg": "/paws-pantry-project-front-end/static/media/stuffed-jaguar.fe275dd89343efa06488.jpg",
     "static/media/iu-sig-formal.png": "/paws-pantry-project-front-end/static/media/iu-sig-formal.9aa2434a36de7bbea817.png",
     "index.html": "/paws-pantry-project-front-end/index.html",
-    "main.a8aff835.css.map": "/paws-pantry-project-front-end/static/css/main.a8aff835.css.map",
-    "main.4ac9757a.js.map": "/paws-pantry-project-front-end/static/js/main.4ac9757a.js.map",
+    "main.da569d06.css.map": "/paws-pantry-project-front-end/static/css/main.da569d06.css.map",
+    "main.d762e10b.js.map": "/paws-pantry-project-front-end/static/js/main.d762e10b.js.map",
     "787.b6b94058.chunk.js.map": "/paws-pantry-project-front-end/static/js/787.b6b94058.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8aff835.css",
-    "static/js/main.4ac9757a.js"
+    "static/css/main.da569d06.css",
+    "static/js/main.d762e10b.js"
   ]
 }
